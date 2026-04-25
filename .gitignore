@@ -1,0 +1,6 @@
+# Logs generados por el script
+*.log
+
+# Archivos temporales de Windows
+Thumbs.db
+desktop.ini
