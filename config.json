@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "logFile": "C:\\apps\\apps\\powershell\\comprimir\\compress-monthly.log",
+    "logEnabled": true,
+    "monthAbbreviations": ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"]
+  },
+  "jobs": [
+    {
+      "name": "MC Completos",
+      "enabled": true,
+      "sourcePaths": [
+        "D:\\datos\\mc\\completos",
+        "D:\\datos\\mc\\completos_alt"
+      ],
+      "filePatterns": [
+        "completoMC_*.txt"
+      ],
+      "backupPath": "D:\\backups\\mc_completos",
+      "zipPrefix": "backup_mccompletos",
+      "dateSource": "filename",
+      "filenameDateRegex": "_(\\d{4})(\\d{2})\\d{2}\\."
+    },
+    {
+      "name": "Reportes Diarios",
+      "enabled": false,
+      "sourcePaths": [
+        "D:\\datos\\reportes"
+      ],
+      "filePatterns": [
+        "reporte_*.csv",
+        "resumen_*.csv"
+      ],
+      "backupPath": "D:\\backups\\reportes",
+      "zipPrefix": "backup_reportes",
+      "dateSource": "creationDate"
+    }
+  ]
+}
