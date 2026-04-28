@@ -153,7 +153,7 @@ function Get-FileDateKey {
             $year  = [int]$Matches[1]
             $month = [int]$Matches[2]
         } else {
-            Write-Log "Omitiendo '$($File.Name)' — el nombre no coincide con el regex de fecha." -Level WARN
+            Write-Log "Omitiendo '$($File.Name)' - el nombre no coincide con el regex de fecha." -Level WARN
             return $null
         }
     } elseif ($Job.dateSource -eq 'creationDate') {
@@ -265,7 +265,7 @@ function Invoke-CompressionJob {
         $zipName   = "$($Job.zipPrefix)_$($meta.MonthAbbr)_$($meta.Year).zip"
         $zipPath   = Join-Path $Job.backupPath $zipName
 
-        Write-Log "Grupo $key ($($meta.MonthAbbr) $($meta.Year)): $($files.Count) archivo(s) → $zipName" -Level DEBUG
+        Write-Log "Grupo $key ($($meta.MonthAbbr) $($meta.Year)): $($files.Count) archivo(s) -> $zipName" -Level DEBUG
 
         if (Test-Path $zipPath) {
             if (-not $Force) {
@@ -315,7 +315,7 @@ function Invoke-CompressionJob {
         }
     }
 
-    Write-Log "Job '$($Job.name)' finalizado — ZIPs creados: $createdCount, omitidos: $skippedCount" -Level INFO
+    Write-Log "Job '$($Job.name)' finalizado - ZIPs creados: $createdCount, omitidos: $skippedCount" -Level INFO
 }
 
 #endregion
@@ -323,7 +323,7 @@ function Invoke-CompressionJob {
 #region ----- Main -----
 
 function Invoke-Main {
-    Write-Log "compress-monthly.ps1 iniciado — $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -Level INFO
+    Write-Log "compress-monthly.ps1 iniciado - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -Level INFO
     Write-Log "Config: $ConfigPath" -Level DEBUG
 
     $config = Get-Config -Path $ConfigPath
