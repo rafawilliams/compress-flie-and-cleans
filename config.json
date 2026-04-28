@@ -1,6 +1,6 @@
 {
   "settings": {
-    "logFile": "C:\\apps\\apps\\powershell\\comprimir\\compress-monthly.log",
+    "logFile": "E:\\Conciliacion_App\\Script\\logs\\compress-monthly.log",
     "logEnabled": true,
     "monthAbbreviations": ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"]
   },
@@ -9,30 +9,15 @@
       "name": "MC Completos",
       "enabled": true,
       "sourcePaths": [
-        "D:\\datos\\mc\\completos",
-        "D:\\datos\\mc\\completos_alt"
+        "E:\\Archivos_Conciliacion\\MastercardT112_Full"
       ],
       "filePatterns": [
-        "completoMC_*.txt"
+        "MastercardCompensacionMCdebito_completo_*.txt"
       ],
-      "backupPath": "D:\\backups\\mc_completos",
-      "zipPrefix": "backup_mccompletos",
+      "backupPath": "E:\\backups\\mc_completos",
+      "zipPrefix": "bk_insumos_mccompletos",
       "dateSource": "filename",
       "filenameDateRegex": "_(\\d{4})(\\d{2})\\d{2}\\."
-    },
-    {
-      "name": "Reportes Diarios",
-      "enabled": false,
-      "sourcePaths": [
-        "D:\\datos\\reportes"
-      ],
-      "filePatterns": [
-        "reporte_*.csv",
-        "resumen_*.csv"
-      ],
-      "backupPath": "D:\\backups\\reportes",
-      "zipPrefix": "backup_reportes",
-      "dateSource": "creationDate"
     }
   ]
 }
