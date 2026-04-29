@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "logFile": "C:\\logs\\organizar-archivos.log",
+    "logEnabled": false
+  },
+  "jobs": [
+    {
+      "name": "Ejemplo Job",
+      "enabled": false,
+      "sourcePath": "D:\\datos\\entrada",
+      "destPath": "D:\\datos\\organizado",
+      "filePatterns": [
+        { "pattern": "archivox_*.txt", "useYesterday": true  },
+        { "pattern": "archivoy_*.txt", "useYesterday": true  },
+        { "pattern": "archivoz_*.txt", "useYesterday": false }
+      ],
+      "fallbackToYesterday": true
+    }
+  ]
+}
